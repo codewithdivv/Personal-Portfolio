@@ -1,0 +1,233 @@
+:root {
+    --primary-color: #1a202c;  /* Deep rich contrast black */
+    --text-color: #2d3748;     /* Clean dark grey for body text */
+    --light-bg: #f8fafc;       /* Muted gray-white for header background */
+    --border-color: #cbd5e1;   /* Defined line separators */
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    /* Updated Font to Times New Roman with serif fallbacks */
+    font-family: 'Times New Roman', Times, Baskerville, Georgia, serif;
+    line-height: 1.5;
+    color: var(--text-color);
+    padding: 60px 20px;
+    min-height: 100vh;
+    
+    /* Rich Aesthetic Gradient Background */
+    background: linear-gradient(135deg, #fbcfe8 0%, #vce4f6 45%, #dbeafe 100%);
+    background-attachment: fixed;
+}
+
+.resume-container {
+    max-width: 850px;
+    margin: 0 auto;
+    background: #ffffff;
+    padding: 55px 50px;
+    /* Soft shadow configuration to separate from the dynamic background gradient */
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.06), 0 1px 10px rgba(0, 0, 0, 0.03);
+    border-radius: 8px; 
+    border: 1px solid rgba(255, 255, 255, 0.6);
+}
+
+/* Header Section */
+header {
+    text-align: center;
+    margin-bottom: 35px;
+}
+
+.header-bg {
+    background-color: var(--light-bg);
+    padding: 26px;
+    margin-bottom: 18px;
+    border-radius: 4px;
+    border: 1px solid #f1f5f9;
+}
+
+h1 {
+    font-size: 32px;
+    color: var(--primary-color);
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    font-weight: 400; /* Classy lighter weight for Times New Roman heading */
+    margin-bottom: 6px;
+}
+
+.subtitle {
+    font-size: 15px;
+    color: #4a5568;
+    font-style: italic; /* Added elegance to subheadings */
+    letter-spacing: 1px;
+}
+
+.contact-info {
+    display: flex;
+    justify-content: center;
+    gap: 24px;
+    flex-wrap: wrap;
+    font-size: 14px;
+    color: #4a5568;
+}
+
+.contact-info a {
+    color: #1a202c;
+    text-decoration: none;
+    border-bottom: 1px solid transparent;
+    transition: all 0.2s ease;
+}
+
+.contact-info a:hover {
+    color: #2563eb;
+    border-bottom: 1px solid #2563eb;
+}
+
+/* Section Commons */
+section {
+    margin-bottom: 35px;
+}
+
+h2 {
+    font-size: 14px;
+    text-transform: uppercase;
+    letter-spacing: 2.5px;
+    font-weight: 700;
+    color: var(--primary-color);
+    border-bottom: 1px solid var(--border-color);
+    padding-bottom: 6px;
+    margin-bottom: 18px;
+    text-align: center;
+}
+
+.about-text {
+    text-align: justify; /* Crisp editorial feel for paragraphs */
+    text-justify: inter-word;
+    font-size: 15px;
+    max-width: 780px;
+    margin: 0 auto;
+    color: var(--text-color);
+}
+
+/* Education Timeline */
+.education-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+    margin-top: 15px;
+}
+
+.edu-item {
+    position: relative;
+}
+
+.edu-date {
+    font-size: 13.5px;
+    font-style: italic;
+    color: #64748b;
+    margin-bottom: 4px;
+}
+
+.edu-school {
+    font-weight: 700;
+    font-size: 15px;
+    color: var(--primary-color);
+}
+
+.edu-location {
+    font-size: 14px;
+    color: #4a5568;
+}
+
+/* Two Column Layout split */
+.main-layout {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: 45px;
+    margin-top: 35px;
+}
+
+/* Left Column Elements */
+.left-col h2 {
+    text-align: left;
+}
+
+.skills-list {
+    list-style: none;
+    margin-bottom: 30px;
+}
+
+.skills-list li {
+    font-size: 15px;
+    padding: 7px 0;
+    border-bottom: 1px dashed #e2e8f0;
+}
+
+.lang-item {
+    margin-bottom: 14px;
+    font-size: 15px;
+}
+
+.lang-name {
+    font-weight: 700;
+}
+
+.lang-line {
+    height: 2px;
+    background-color: var(--border-color);
+    margin-top: 6px;
+    width: 85%;
+}
+
+/* Right Column Elements (Work Experience) */
+.right-col h2 {
+    text-align: left;
+}
+
+.exp-item {
+    margin-bottom: 28px;
+}
+
+.exp-date {
+    font-size: 13.5px;
+    font-style: italic;
+    color: #64748b;
+}
+
+.exp-title {
+    font-size: 16px;
+    font-weight: 700;
+    color: var(--primary-color);
+    margin-bottom: 6px;
+}
+
+.exp-bullets {
+    padding-left: 18px;
+}
+
+.exp-bullets li {
+    font-size: 14.5px;
+    margin-bottom: 6px;
+    color: var(--text-color);
+    text-align: justify;
+}
+
+/* Responsive view */
+@media (max-width: 600px) {
+    body {
+        padding: 20px 10px;
+    }
+    .main-layout, .education-grid {
+        grid-template-columns: 1fr;
+        gap: 25px;
+    }
+    .resume-container {
+        padding: 30px 20px;
+    }
+    .left-col h2, .right-col h2 {
+        text-align: center;
+    }
+}
